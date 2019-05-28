@@ -27,7 +27,6 @@
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Gmail" textAlignment="natural" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aML-db-OCH">
                                 <rect key="frame" x="74" y="346" width="268" height="40"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="268" id="RF7-Si-9kE"/>
                                     <constraint firstAttribute="height" constant="40" id="V3x-Ql-eMC"/>
                                 </constraints>
                                 <nil key="textColor"/>
@@ -244,16 +243,27 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xIP-VX-xLC">
+                                <rect key="frame" x="133" y="788" width="150" height="30"/>
+                                <state key="normal" title="Create a new account">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="Yc5-bf-BHf" kind="presentation" id="8d3-9a-aDT"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.58980089430000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="q3d-FQ-ZN1" firstAttribute="leading" secondItem="IDQ-hf-dPt" secondAttribute="leading" constant="74" id="6e9-Dj-sot"/>
                             <constraint firstItem="JHB-j5-YTs" firstAttribute="top" secondItem="9ge-rS-tRh" secondAttribute="bottom" constant="76" id="ARz-Mm-7jg"/>
+                            <constraint firstItem="IDQ-hf-dPt" firstAttribute="bottom" secondItem="xIP-VX-xLC" secondAttribute="bottom" constant="44" id="BTt-WE-eF2"/>
                             <constraint firstItem="9ge-rS-tRh" firstAttribute="centerX" secondItem="Jfe-y7-QAF" secondAttribute="centerX" id="HqD-jk-sjo"/>
                             <constraint firstItem="QtZ-dc-KO2" firstAttribute="centerX" secondItem="Jfe-y7-QAF" secondAttribute="centerX" id="MEI-uq-uCz"/>
                             <constraint firstItem="9ge-rS-tRh" firstAttribute="top" secondItem="IDQ-hf-dPt" secondAttribute="top" constant="88" id="O8T-34-lzq"/>
                             <constraint firstItem="QtZ-dc-KO2" firstAttribute="top" secondItem="Lzc-ot-m8x" secondAttribute="bottom" constant="66" id="TlW-ap-JWv"/>
                             <constraint firstItem="IDQ-hf-dPt" firstAttribute="trailing" secondItem="q3d-FQ-ZN1" secondAttribute="trailing" constant="74" id="WB3-KH-pTw"/>
+                            <constraint firstItem="xIP-VX-xLC" firstAttribute="centerX" secondItem="Jfe-y7-QAF" secondAttribute="centerX" id="ZDM-OF-W8N"/>
                             <constraint firstItem="IDQ-hf-dPt" firstAttribute="trailing" secondItem="Lzc-ot-m8x" secondAttribute="trailing" constant="74" id="dGj-jG-cg5"/>
                             <constraint firstItem="IDQ-hf-dPt" firstAttribute="trailing" secondItem="JHB-j5-YTs" secondAttribute="trailing" constant="74" id="dmY-yu-ue0"/>
                             <constraint firstItem="q3d-FQ-ZN1" firstAttribute="top" secondItem="JHB-j5-YTs" secondAttribute="bottom" constant="44" id="gHw-kx-kkK"/>
@@ -295,7 +305,7 @@
                     </view>
                     <connections>
                         <segue destination="Yc5-bf-BHf" kind="modal" identifier="register" id="mCe-Zd-Khm"/>
-                        <segue destination="6Ef-Ii-Ile" kind="modal" id="JmX-Pd-6nd"/>
+                        <segue destination="6Ef-Ii-Ile" kind="modal" identifier="login" id="JmX-Pd-6nd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jmj-ZO-jLE" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -307,6 +317,8 @@
         <image name="icons8-around-the-globe-96" width="96" height="96"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="2kW-U7-cfj"/>
+        <segue reference="oQW-Vy-Wje"/>
+        <segue reference="R6B-GD-iBt"/>
+        <segue reference="8d3-9a-aDT"/>
     </inferredMetricsTieBreakers>
 </document>

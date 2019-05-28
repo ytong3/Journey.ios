@@ -22,6 +22,7 @@
 		58C42EED229C2B4100FC663B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 58C42EEB229C2B4100FC663B /* LaunchScreen.storyboard */; };
 		58C42EF9229C2BDC00FC663B /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58C42EF8229C2BDC00FC663B /* MainViewController.swift */; };
 		9E48B4A98DF1B2DA47B9A1A5 /* Pods_Journey.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB9A20D3B12258EE865E31AF /* Pods_Journey.framework */; };
+		9EDF437D229DC88B006B6723 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9EDF437C229DC88B006B6723 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		58C42EEC229C2B4100FC663B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		58C42EEE229C2B4100FC663B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		58C42EF8229C2BDC00FC663B /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		9EDF437C229DC88B006B6723 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		BB9A20D3B12258EE865E31AF /* Pods_Journey.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Journey.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEE393760BD4D70CF70A66EC /* Pods-Journey.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Journey.release.xcconfig"; path = "Target Support Files/Pods-Journey/Pods-Journey.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -101,6 +103,7 @@
 				58C42EF5229C2B8500FC663B /* Controllers */,
 				58C42EF4229C2B6E00FC663B /* Config */,
 				58C42EE9229C2B4100FC663B /* Assets.xcassets */,
+				9EDF437C229DC88B006B6723 /* GoogleService-Info.plist */,
 				58C42EEE229C2B4100FC663B /* Info.plist */,
 			);
 			path = Journey;
@@ -217,6 +220,7 @@
 			files = (
 				5811800A229C7D8D00E5105B /* Startup.storyboard in Resources */,
 				58C42EED229C2B4100FC663B /* LaunchScreen.storyboard in Resources */,
+				9EDF437D229DC88B006B6723 /* GoogleService-Info.plist in Resources */,
 				58C42EEA229C2B4100FC663B /* Assets.xcassets in Resources */,
 				58C42EE8229C2B4000FC663B /* Main.storyboard in Resources */,
 			);

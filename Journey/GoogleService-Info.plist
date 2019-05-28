@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>713638001162-jplfe21f6b1cinjfs4fp37vofocjk57h.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.713638001162-jplfe21f6b1cinjfs4fp37vofocjk57h</string>
+	<key>API_KEY</key>
+	<string>AIzaSyCa4gdieOnR_Dx0fmIs1RgvCCH__2bEP8k</string>
+	<key>GCM_SENDER_ID</key>
+	<string>713638001162</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>Biang.Journey</string>
+	<key>PROJECT_ID</key>
+	<string>journey-7771d</string>
+	<key>STORAGE_BUCKET</key>
+	<string>journey-7771d.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:713638001162:ios:b80a9d643ce1084e</string>
+	<key>DATABASE_URL</key>
+	<string>https://journey-7771d.firebaseio.com</string>
+</dict>
+</plist>
