@@ -12,7 +12,7 @@ import FirebaseAuth
 class RegisterViewController: UIViewController {
     
     @IBOutlet weak var usernameField: UITextField!
-    @IBOutlet weak var gmailField: UITextField!
+    @IBOutlet weak var emailField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
     @IBOutlet weak var registerButton: UIButton!
     @IBOutlet weak var waitSpinner: UIActivityIndicatorView!
@@ -24,8 +24,8 @@ class RegisterViewController: UIViewController {
         usernameField.borderStyle = .roundedRect
         usernameField.addTarget(self, action: #selector(RegisterViewController.textFieldChangedEventHandler), for: .editingChanged)
         
-        gmailField.borderStyle = .roundedRect
-        gmailField.addTarget(self, action: #selector(RegisterViewController.textFieldChangedEventHandler), for: UIControl.Event.editingChanged)
+        emailField.borderStyle = .roundedRect
+        emailField.addTarget(self, action: #selector(RegisterViewController.textFieldChangedEventHandler), for: UIControl.Event.editingChanged)
         
         passwordField.borderStyle = .roundedRect
         passwordField.addTarget(self, action: #selector(RegisterViewController.textFieldChangedEventHandler), for: UIControl.Event.editingChanged)
@@ -33,7 +33,7 @@ class RegisterViewController: UIViewController {
     
     @IBAction func registerButtonPressed(_ sender: UIButton) {
         guard let name = usernameField.text, !name.isEmpty,
-              let email = gmailField.text, !email.isEmpty,
+              let email = emailField.text, !email.isEmpty,
               let password = passwordField.text, !password.isEmpty else {
                 self.showMessagePrompt(message: "Username/email/password cannot be empty")
                 return
@@ -58,7 +58,7 @@ class RegisterViewController: UIViewController {
     //MARK - Input Validation
     
     @objc func textFieldChangedEventHandler() {
-        guard let name = usernameField.text, !name.isEmpty, let email = gmailField.text, !email.isEmpty, let password = passwordField.text, password.count>6 else {
+        guard let name = usernameField.text, !name.isEmpty, let email = emailField.text, !email.isEmpty, let password = passwordField.text, password.count>6 else {
             registerButton.setTitleColor(UIColor.lightText, for: UIControl.State.normal)
             registerButton.isEnabled = false
             

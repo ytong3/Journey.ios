@@ -14,6 +14,7 @@ class LoginViewController : UIViewController {
     @IBOutlet weak var passwordField: UITextField!
     @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var forgetPasswordButton: UIButton!
+    @IBOutlet weak var waitSpinner: UIActivityIndicatorView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,6 +37,27 @@ class LoginViewController : UIViewController {
         
         loginButton.setTitleColor(UIColor.white, for: UIControl.State.normal)
         loginButton.isEnabled = true
+    }
+    
+    @IBAction func loginButtonPressed(_ sender: UIButton) {
+        guard let email = emailField.text, !email.isEmpty, let password = passwordField.text, password.count>=6 else{
+            showMessagePrompt(message: "Email/Password is not cannot be empty")
+            
+            return
+        }
+        
+        waitSpinner.startAnimating()
+        
+        Auth.auth().signIn(withEmail: email, password: password){
+            (user, error) in
+            self.waitSpinner.stopAnimating()
+            
+            if let error = error {
+                self.showMessagePrompt(message: error.localizedDescription)
+                return
+            }
+            appDelegate.window!.rootViewController?.dismiss(animated: true, completion: nil)
+        }
     }
     
     @IBAction func forgetPasswordButtonPressed(_ sender: UIButton) {
