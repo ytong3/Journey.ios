@@ -1,4 +1,5 @@
 PODS:
+  - Eureka (4.3.1)
   - Firebase/Auth (5.16.0):
     - Firebase/CoreOnly
     - FirebaseAuth (= 5.3.0)
@@ -58,13 +59,17 @@ PODS:
     - nanopb/encode (= 0.3.901)
   - nanopb/decode (0.3.901)
   - nanopb/encode (0.3.901)
+  - UIEmptyState (4.0.1)
 
 DEPENDENCIES:
+  - Eureka
   - Firebase/Auth
   - Firebase/Core
+  - UIEmptyState
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - Eureka
     - Firebase
     - FirebaseAnalytics
     - FirebaseAuth
@@ -75,8 +80,10 @@ SPEC REPOS:
     - GoogleUtilities
     - GTMSessionFetcher
     - nanopb
+    - UIEmptyState
 
 SPEC CHECKSUMS:
+  Eureka: 28ea296f06710f6745266b71f17862048941a32d
   Firebase: 749a8ff4962f9d8c79dda1966de20f6f77583d67
   FirebaseAnalytics: d35d47c03c50c73c14a7fd31463c5775843e78a9
   FirebaseAuth: c9b3ff063c223d2841d97240af547ce511bce19a
@@ -87,7 +94,8 @@ SPEC CHECKSUMS:
   GoogleUtilities: 111a012f4c3a29c9e7c954c082fafd6ee3c999c0
   GTMSessionFetcher: 32aeca0aa144acea523e1c8e053089dec2cb98ca
   nanopb: 2901f78ea1b7b4015c860c2fdd1ea2fee1a18d48
+  UIEmptyState: 767376694d9402452fb3c0a5a5283176c6a53c92
 
-PODFILE CHECKSUM: d232e60a5fdb166c0f556bae517b73125d026a2a
+PODFILE CHECKSUM: 667e86b0a03297d2798af28d03db8001084c8592
 
 COCOAPODS: 1.6.0

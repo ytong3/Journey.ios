@@ -7,6 +7,8 @@ target 'Journey' do
 
   # Pods for Journey
   pod 'Firebase/Core'
-  pod 'Firebase/Auth' 
+  pod 'Firebase/Auth'
+  pod 'UIEmptyState'
+  pod 'Eureka'
 
 end
