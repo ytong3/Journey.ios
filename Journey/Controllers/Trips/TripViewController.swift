@@ -10,11 +10,13 @@ import UIKit
 import Eureka
 
 class TripViewController : FormViewController{
+    var delegate: AddTripsDelegate?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         //configure the form
-        navigationOptions = .Disabled
+        //navigationOptions = .Disabled
         form
             +++ Section()
             <<< TextRow("name") { row in
@@ -33,7 +35,7 @@ class TripViewController : FormViewController{
                 }
         
             +++ Section(NSLocalizedString("Start", comment: "Section header"))
-            <<< DateTimeInlineRow("form_date") {row in
+            <<< DateTimeInlineRow("from_date") {row in
                 row.title=NSLocalizedString("Date", comment: "label")
                 }.onChange {row in
                     if let v=row.value {
@@ -41,10 +43,23 @@ class TripViewController : FormViewController{
                         r?.minimumDate = v
                     }
                 }
-            <<< TextRow("to_place") {row in
+            <<< TextRow("from_place") {row in
                     row.title = NSLocalizedString("Place", comment: "label")
                 }
-        }
+        
+            +++ Section(NSLocalizedString("End", comment: "Section header"))
+            <<< DateTimeInlineRow("to_date") {row in
+                row.title = NSLocalizedString("Date", comment: "label")
+                }.onChange{row in
+                    if let v = row.value {
+                        let r: DateTimeInlineRow? = self.form.rowBy(tag: "from_date")
+                        r?.maximumDate = v
+                    }
+                }
+            <<< TextRow("to_place") { row in
+                    row.title = NSLocalizedString("Place", comment: "label")
+                }
+    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -56,13 +71,19 @@ class TripViewController : FormViewController{
     
     @IBAction func saveButtonPressed(_ sender: UIBarButtonItem) {
         let errors = form.validate()
-        if errors.count>0{
+        if errors.count>0 {
             print("We've got an error")
             showMessagePrompt(message: "Invalid inputs")
         }
         else{
             let valuesDict = form.values()
+            print(valuesDict)
+            delegate!.userAddedANewTrip(tripValues: valuesDict)
             self.dismiss(animated: true, completion: nil)
         }
     }
+}
+
+protocol AddTripsDelegate {
+    func userAddedANewTrip(tripValues: [String: Any?])
 }

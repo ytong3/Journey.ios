@@ -9,8 +9,8 @@
 import UIKit
 import UIEmptyState
 
-class TripsTableViewController : UITableViewController{
-    let trips: [String] = []
+class TripsTableViewController : UITableViewController {
+    var trips: [String] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,6 +42,21 @@ class TripsTableViewController : UITableViewController{
         
         return cell
         // configure the cell ..
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "addTrip"{
+            let navigation = segue.destination as! UINavigationController
+            
+            var vc = TripViewController.init()
+            vc = navigation.viewControllers[0] as! TripViewController
+            vc.delegate = self
+        }
     }
 }
 
@@ -80,5 +95,14 @@ extension TripsTableViewController: UIEmptyStateDelegate{
         print("Button clicked, take action")
         
         performSegue(withIdentifier: "addTrip", sender: nil)
+    }
+}
+
+extension TripsTableViewController: AddTripsDelegate{
+    func userAddedANewTrip(tripValues: [String : Any?]) {
+        self.trips.append(tripValues["name"] as! String)
+        
+        tableView.reloadData()
+        reloadEmptyState()
     }
 }

@@ -19,11 +19,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="KCr-ui-mbc" customClass="TripsTripTableViewCell" customModule="Journey" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="TripsTripCell" id="KCr-ui-mbc" customClass="TripsTripTableViewCell" customModule="Journey" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="KCr-ui-mbc" id="o3a-yA-dMD">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="376" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ysE-0E-2Bu">
@@ -53,7 +53,7 @@
                     </navigationItem>
                     <nil key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <segue destination="4j9-AQ-lu4" kind="showDetail" identifier="addTrip" id="GDd-rc-Hql"/>
+                        <segue destination="fNu-dp-KOe" kind="presentation" identifier="addTrip" id="37P-et-Bcm"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="geV-78-5mX" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -63,6 +63,7 @@
         <!--Add Trip-->
         <scene sceneID="H8P-4i-BzV">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YVK-VU-80d" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="0Ka-f3-gPh" customClass="TripViewController" customModule="Journey" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hPX-Ej-K5u">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -83,9 +84,8 @@
                         </barButtonItem>
                     </navigationItem>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="YVK-VU-80d" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3592.753623188406" y="-635.49107142857144"/>
+            <point key="canvasLocation" x="3455" y="-636"/>
         </scene>
         <!--First-->
         <scene sceneID="hNz-n2-bh7">
@@ -131,7 +131,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3939.130434782609" y="0.0"/>
+            <point key="canvasLocation" x="4849.275362318841" y="0.0"/>
         </scene>
         <!--Second-->
         <scene sceneID="wg7-f3-ORb">
@@ -209,22 +209,22 @@
             <point key="canvasLocation" x="973.91304347826099" y="-636.16071428571422"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="WFQ-9e-tqV">
+        <scene sceneID="Gdt-fq-DVR">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="4j9-AQ-lu4" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="fNu-dp-KOe" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="jlZ-nI-rdU">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="sRa-Hf-s0T">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="0Ka-f3-gPh" kind="relationship" relationship="rootViewController" id="EAO-Eg-9GX"/>
+                        <segue destination="0Ka-f3-gPh" kind="relationship" relationship="rootViewController" id="O6W-LA-HTG"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="baW-Ux-h0I" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xIJ-Ft-7LZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2682.608695652174" y="-635.49107142857144"/>
+            <point key="canvasLocation" x="2678" y="-636"/>
         </scene>
     </scenes>
     <resources>
