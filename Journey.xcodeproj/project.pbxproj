@@ -14,6 +14,8 @@
 		5811800C229C880E00E5105B /* UIViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5811800B229C880E00E5105B /* UIViewControllerExtensions.swift */; };
 		5811800E229C8AB700E5105B /* GlobalAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5811800D229C8AB700E5105B /* GlobalAppDelegate.swift */; };
 		58118010229C93C300E5105B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5811800F229C93C300E5105B /* LoginViewController.swift */; };
+		5811801222A1CD9900E5105B /* StoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5811801122A1CD9900E5105B /* StoryTableViewController.swift */; };
+		5811801422A1CFCC00E5105B /* StoryEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5811801322A1CFCC00E5105B /* StoryEditViewController.swift */; };
 		58C42EE1229C2B4000FC663B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58C42EE0229C2B4000FC663B /* AppDelegate.swift */; };
 		58C42EE3229C2B4000FC663B /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58C42EE2229C2B4000FC663B /* FirstViewController.swift */; };
 		58C42EE5229C2B4000FC663B /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58C42EE4229C2B4000FC663B /* SecondViewController.swift */; };
@@ -38,6 +40,8 @@
 		5811800B229C880E00E5105B /* UIViewControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtensions.swift; sourceTree = "<group>"; };
 		5811800D229C8AB700E5105B /* GlobalAppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalAppDelegate.swift; sourceTree = "<group>"; };
 		5811800F229C93C300E5105B /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		5811801122A1CD9900E5105B /* StoryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryTableViewController.swift; sourceTree = "<group>"; };
+		5811801322A1CFCC00E5105B /* StoryEditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryEditViewController.swift; sourceTree = "<group>"; };
 		58C42EDD229C2B4000FC663B /* Journey.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Journey.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		58C42EE0229C2B4000FC663B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		58C42EE2229C2B4000FC663B /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -165,6 +169,8 @@
 				9EDF4382229ECAF8006B6723 /* TripsTableViewController.swift */,
 				9EDF4384229EEE81006B6723 /* TripsTripTableViewCell.swift */,
 				9EDF4386229EEF38006B6723 /* TripViewController.swift */,
+				5811801122A1CD9900E5105B /* StoryTableViewController.swift */,
+				5811801322A1CFCC00E5105B /* StoryEditViewController.swift */,
 			);
 			path = Trips;
 			sourceTree = "<group>";
@@ -283,7 +289,10 @@
 				"${BUILT_PRODUCTS_DIR}/Eureka/Eureka.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/PryntTrimmerView/PryntTrimmerView.framework",
+				"${BUILT_PRODUCTS_DIR}/SteviaLayout/Stevia.framework",
 				"${BUILT_PRODUCTS_DIR}/UIEmptyState/UIEmptyState.framework",
+				"${BUILT_PRODUCTS_DIR}/YPImagePicker/YPImagePicker.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -293,7 +302,10 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Eureka.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PryntTrimmerView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Stevia.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/UIEmptyState.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YPImagePicker.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -308,6 +320,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5811801222A1CD9900E5105B /* StoryTableViewController.swift in Sources */,
 				9EDF437F229DF743006B6723 /* ForgetPasswordViewController.swift in Sources */,
 				9EDF4385229EEE81006B6723 /* TripsTripTableViewCell.swift in Sources */,
 				58C42EE5229C2B4000FC663B /* SecondViewController.swift in Sources */,
@@ -321,6 +334,7 @@
 				9EDF4383229ECAF8006B6723 /* TripsTableViewController.swift in Sources */,
 				58118003229C318000E5105B /* StartupViewController.swift in Sources */,
 				58118010229C93C300E5105B /* LoginViewController.swift in Sources */,
+				5811801422A1CFCC00E5105B /* StoryEditViewController.swift in Sources */,
 				58118006229C6EFC00E5105B /* UserDefaultsExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

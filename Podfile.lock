@@ -59,13 +59,19 @@ PODS:
     - nanopb/encode (= 0.3.901)
   - nanopb/decode (0.3.901)
   - nanopb/encode (0.3.901)
+  - PryntTrimmerView (3.0.0)
+  - SteviaLayout (4.4.3)
   - UIEmptyState (4.0.1)
+  - YPImagePicker (3.5.3):
+    - PryntTrimmerView (~> 3.0.0)
+    - SteviaLayout (~> 4.4.1)
 
 DEPENDENCIES:
   - Eureka
   - Firebase/Auth
   - Firebase/Core
   - UIEmptyState
+  - YPImagePicker
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -80,7 +86,10 @@ SPEC REPOS:
     - GoogleUtilities
     - GTMSessionFetcher
     - nanopb
+    - PryntTrimmerView
+    - SteviaLayout
     - UIEmptyState
+    - YPImagePicker
 
 SPEC CHECKSUMS:
   Eureka: 28ea296f06710f6745266b71f17862048941a32d
@@ -94,8 +103,11 @@ SPEC CHECKSUMS:
   GoogleUtilities: 111a012f4c3a29c9e7c954c082fafd6ee3c999c0
   GTMSessionFetcher: 32aeca0aa144acea523e1c8e053089dec2cb98ca
   nanopb: 2901f78ea1b7b4015c860c2fdd1ea2fee1a18d48
+  PryntTrimmerView: 53ac64053c7ce63cb3e27f54090f52da0734891d
+  SteviaLayout: ae5ee66101e03607a93c9b3773b84ab7ba7b3d17
   UIEmptyState: 767376694d9402452fb3c0a5a5283176c6a53c92
+  YPImagePicker: 5dd3814b47b1208e9c8cc8f6ef77fe90db3723b6
 
-PODFILE CHECKSUM: 667e86b0a03297d2798af28d03db8001084c8592
+PODFILE CHECKSUM: 8ddee06b16e950e5c93d7c66762d9a8541f09997
 
 COCOAPODS: 1.6.0

@@ -10,7 +10,7 @@ import UIKit
 import UIEmptyState
 
 class TripsTableViewController : UITableViewController {
-    var trips: [String] = []
+    var trips: [String] = ["Toronto", "Beijing", "Xi'an", "New York", "Philadelphia"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,7 +46,7 @@ class TripsTableViewController : UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        
+        performSegue(withIdentifier: "gotoTrip", sender: nil)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

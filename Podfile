@@ -10,5 +10,6 @@ target 'Journey' do
   pod 'Firebase/Auth'
   pod 'UIEmptyState'
   pod 'Eureka'
+  pod 'YPImagePicker'
 
 end
