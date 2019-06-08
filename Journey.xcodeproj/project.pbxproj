@@ -23,6 +23,7 @@
 		58C42EEA229C2B4100FC663B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 58C42EE9229C2B4100FC663B /* Assets.xcassets */; };
 		58C42EED229C2B4100FC663B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 58C42EEB229C2B4100FC663B /* LaunchScreen.storyboard */; };
 		58C42EF9229C2BDC00FC663B /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58C42EF8229C2BDC00FC663B /* MainViewController.swift */; };
+		9E2A424622AAEFB00034EF78 /* StoryEditThumbnailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E2A424522AAEFB00034EF78 /* StoryEditThumbnailCell.swift */; };
 		9E48B4A98DF1B2DA47B9A1A5 /* Pods_Journey.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB9A20D3B12258EE865E31AF /* Pods_Journey.framework */; };
 		9EDF437D229DC88B006B6723 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9EDF437C229DC88B006B6723 /* GoogleService-Info.plist */; };
 		9EDF437F229DF743006B6723 /* ForgetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EDF437E229DF743006B6723 /* ForgetPasswordViewController.swift */; };
@@ -51,6 +52,7 @@
 		58C42EEC229C2B4100FC663B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		58C42EEE229C2B4100FC663B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		58C42EF8229C2BDC00FC663B /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		9E2A424522AAEFB00034EF78 /* StoryEditThumbnailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryEditThumbnailCell.swift; sourceTree = "<group>"; };
 		9EDF437C229DC88B006B6723 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		9EDF437E229DF743006B6723 /* ForgetPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgetPasswordViewController.swift; sourceTree = "<group>"; };
 		9EDF4382229ECAF8006B6723 /* TripsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripsTableViewController.swift; sourceTree = "<group>"; };
@@ -171,6 +173,7 @@
 				9EDF4386229EEF38006B6723 /* TripViewController.swift */,
 				5811801122A1CD9900E5105B /* StoryTableViewController.swift */,
 				5811801322A1CFCC00E5105B /* StoryEditViewController.swift */,
+				9E2A424522AAEFB00034EF78 /* StoryEditThumbnailCell.swift */,
 			);
 			path = Trips;
 			sourceTree = "<group>";
@@ -334,6 +337,7 @@
 				9EDF4383229ECAF8006B6723 /* TripsTableViewController.swift in Sources */,
 				58118003229C318000E5105B /* StartupViewController.swift in Sources */,
 				58118010229C93C300E5105B /* LoginViewController.swift in Sources */,
+				9E2A424622AAEFB00034EF78 /* StoryEditThumbnailCell.swift in Sources */,
 				5811801422A1CFCC00E5105B /* StoryEditViewController.swift in Sources */,
 				58118006229C6EFC00E5105B /* UserDefaultsExtension.swift in Sources */,
 			);

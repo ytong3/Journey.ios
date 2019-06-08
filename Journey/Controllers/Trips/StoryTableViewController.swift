@@ -20,6 +20,7 @@ class StoryTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        print(stories.count)
         return stories.count
     }
     

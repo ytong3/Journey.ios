@@ -39,6 +39,8 @@ class StoryEditViewController: UIViewController {
         story.text = notePlaceholder
         story.textColor = UIColor.lightGray
         story.delegate = self
+        media.dataSource = self
+        media.delegate = self
         
         becomeFirstResponder()
     }
@@ -52,10 +54,7 @@ class StoryEditViewController: UIViewController {
     }
     
     @IBAction func photoPickerAction(_ sender: Any) {
-        print("go and pick a photo")
-        
         // Show the image picker
-        
         var config = YPImagePickerConfiguration()
         config.isScrollToChangeModesEnabled = true
         config.onlySquareImagesFromCamera = true
@@ -109,8 +108,7 @@ class StoryEditViewController: UIViewController {
                 }
             }
             
-            self.media.reloadData()
-            
+            self.refreshMediaWindow()
             //close picker
             picker.dismiss(animated: true, completion: nil)
         }
@@ -118,6 +116,17 @@ class StoryEditViewController: UIViewController {
     }
     
     // MARK: - Navigation
+    
+    func refreshMediaWindow() {
+        if (images.count > 0) {
+            media.backgroundColor = .white
+        }
+        else{
+            media.backgroundColor = .lightGray
+        }
+        
+        media.reloadData()
+    }
 }
 
 extension StoryEditViewController : UITextViewDelegate {
@@ -156,15 +165,47 @@ extension StoryEditViewController: UICollectionViewDelegate {
 }
 
 extension StoryEditViewController: UICollectionViewDataSource {
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return 1
+    }
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        print(images.count)
         return self.images.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "mediaCell", for: indexPath)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "mediaCell", for: indexPath) as! StoryEditThumbnailCell
         
-        cell.index = indexPath.row
         cell.delegate = self
-        cell.
+        cell.index = indexPath.row
+        cell.picture.image = images[indexPath.row]
+        
+        cell.picture.layer.cornerRadius = 12.0
+        cell.picture.clipsToBounds = true
+        
+        return cell
+    }
+}
+
+extension StoryEditViewController : UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let image = images[indexPath.row]
+        
+        let s = image.size
+        let w = (s.width/s.height) * 200
+        
+        print("w \(w), h \(200)")
+        
+        return CGSize(width: w, height: 200)
+    }
+}
+
+extension StoryEditViewController : StoryEditDelegate{
+    func mediaDeleted(index: Int) {
+        print("Deleted media: \(index)")
+        
+        images.remove(at: index)
+        refreshMediaWindow()
     }
 }
